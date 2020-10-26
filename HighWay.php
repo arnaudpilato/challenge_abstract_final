@@ -50,5 +50,5 @@ abstract class HighWay
         return $this;
     }
 
-    abstract public function addVehicle(Vehicle $currentVehicle):
+    abstract public function addVehicle();
 }
