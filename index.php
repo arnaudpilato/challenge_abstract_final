@@ -4,6 +4,9 @@ require_once 'vehicle.php';
 require_once 'car.php';
 require_once 'bicycle.php';
 require_once 'truck.php';
+require_once 'MotorWay.php';
+require_once 'PedestrianWay.php';
+require_once 'ResidentialWay.php';
 
 $bike = new Bicycle('green', 1);
 var_dump($bike);
@@ -44,3 +47,8 @@ echo $truck->brake() . '<br>';
 
 $truck->setLoading(5);
 echo 'Truck load... : ' . $truck->loadingStatus();
+
+
+$michel = new PedestrianWay();
+$ducati = new MotorWay();
+$family = new ResidentialWay();
