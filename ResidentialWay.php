@@ -9,9 +9,9 @@ final class ResidentialWay extends HighWay
         $this->maxSpeed = 50;
     }
 
-    public function addVehicle()
+    public function addVehicle(Vehicle $vehicle)
     {
-        if ($this instanceof Vehicle) {
+        if ($vehicle instanceof Vehicle) {
             $currentVehicle[] = $this;
         }
     }
