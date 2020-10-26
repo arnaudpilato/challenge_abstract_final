@@ -1,17 +1,19 @@
 <?php
 
-require_once __DIR__ . 'HighWay.php';
+require_once __DIR__ . '/HighWay.php';
 
-final class ResidentialWay extends HighWay
+final class PedestrianWay extends HighWay
 {
     public function __construct()
     {
-        $this->nbLane = 2;
-        $this->maxSpeed = 50;
+        $this->nbLane = 4;
+        $this->maxSpeed = 130;
     }
 
     public function addVehicle()
     {
-        $currentVehicle[] = $this;
+        if ($this instanceof Bicycle) {
+            $currentVehicle[] = $this;
+        }
     }
 }
