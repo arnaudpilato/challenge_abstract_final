@@ -15,6 +15,5 @@ final class PedestrianWay extends HighWay
         if ($vehicle instanceof Bicycle) {
             $currentVehicle[] = $this;
         }
-
     }
 }
