@@ -1,52 +1,19 @@
 <?php
 
+require_once __DIR__ . '/HighWay.php';
 
-abstract class HighWay
+final class MotorWay extends HighWay
 {
-    /**
-     * @var array
-     */
-    protected $currentVehicles;
-
-    /**
-     * @var int
-     */
-    protected $nbLane;
-
-    /**
-     * @var int
-     */
-    protected $maxSpeed;
-
-    function getCurrentVehicle(): array
+    public function __construct()
     {
-        $this->currentVehicles;
+        $this->nbLane = 4;
+        $this->maxSpeed = 130;
     }
 
-    function setCurrentVehicle(array $currentVehicles) : void
+    public function addVehicle()
     {
-        $this->currentVehicles = $currentVehicles;
+        if ($this instanceof Car) {
+            $currentVehicle[] = $this;
+        }
     }
-
-    function getNbLane(): int
-    {
-        $this->nbLane;
-    }
-
-    function setNbLane(int $nbLane): void
-    {
-        $this->nbLane = $nbLane;
-    }
-
-    function getMaxSpeed(): int
-    {
-        $this->maxSpeed;
-    }
-
-    function setMaxSpeed(array $maxSpeed): void
-    {
-        $this->maxSpeed = $maxSpeed;
-    }
-
-    abstract public function addVehicle();
 }
